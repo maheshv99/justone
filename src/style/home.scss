@@ -1,0 +1,94 @@
+@import "./global.scss";
+
+.section {
+  width: 100%;
+  scroll-behavior: smooth;
+  padding-top: 20px;
+}
+
+.menu {
+  .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 10;
+    box-shadow: $boxShadow;
+    .div-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      .filter {
+        position: absolute;
+        left: 10px;
+        &:hover {
+          cursor: pointer;
+        }
+        input {
+          border: 2px solid #000;
+        }
+        .icon {
+          width: 40px;
+          height: 40px;
+          width: 100%;
+        }
+      }
+    }
+    .div-filter {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input {
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  margin-top: 5px;
+  background-color: $clrGold;
+}
+
+.filter-btn {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  border: 2px solid $clrGold;
+  cursor: pointer;
+  transition: $transition;
+  border-radius: $borderRadius;
+  margin-bottom: 20px;
+}
+
+.filter-btn:hover {
+  background: $clrGold;
+  color: $clrWhite;
+}
+
+.active-btn {
+  background: $clrGold;
+  color: $clrWhite;
+}
+
+@media screen and (min-width: 1000px) {
+  .recipes {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3em;
+    grid-row-gap: 3em;
+  }
+}
